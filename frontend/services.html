@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  background-color: #7c4dff;
+  color:  white;
+padding: 10px 20px;
+border-radius: 20px;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.2s;
+}
+
+a:hover {
+background-color: #651fff;
+}
+
+  </style>
+</head>
+<body>
+    <script>
+// Select the category list items
+const categories = document.querySelectorAll('li');
+
+// Add a click event listener to each category
+categories.forEach(category => {
+  category.addEventListener('click', () => {
+    // Redirect the user to the corresponding category page
+    const categoryTitle = category.querySelector('h3').textContent;
+    window.location.href = `category/${categoryTitle.toLowerCase().replace(' ', '-')}`;
+  });
+});
+
+    </script>
+  <h1>Available Services</h1>
+  
+  <div class="content">
+    <ul class="category-list">
+      <li>
+        <img src="category1.jpg" alt="Category 1">
+        <h3>Web Development</h3>
+        <p>Find experts in HTML, CSS, JavaScript, PHP, and more.</p>
+        <a href="#">Explore</a>
+      </li>
+      <li>
+        <img src="category2.jpg" alt="Category 2">
+        <h3>Graphic Design</h3>
+        <p>Hire designers for logos, banners, illustrations, and more.</p>
+        <a href="#">Explore</a>
+      </li>
+      <li>
+        <img src="category3.jpg" alt="Category 3">
+        <h3>Digital Marketing</h3>
+        <p>Grow your business with SEO, social media, and PPC experts.</p>
+        <a href="#">Explore</a>
+      </li>
+      <li>
+        <img src="category4.jpg" alt="Category 4">
+        <h3>Writing & Translation</h3>
+        <p>Get content writing, translation, editing, and proofreading services.</p>
+        <a href="#">Explore</a>
+      </li>
+      <li>
+        <img src="category5.jpg" alt="Category 5">
+        <h3>Video & Animation</h3>
+        <p>Create explainer videos, animations, and motion graphics.</p>
+        <a href="#">Explore</a>
+      </li>
+      <li>
+        <img src="category6.jpg" alt="Category 6">
+        <h3>Music & Audio</h3>
+        <p>Produce music, sound effects, and voiceovers for your projects.</p>
+        <a href="#">Explore</a>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
